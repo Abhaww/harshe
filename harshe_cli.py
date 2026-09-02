@@ -87,6 +87,31 @@ def create_new_project(project_name: str) -> None:
 
     os.makedirs(os.path.join(project_name, "kayan_aiki"), exist_ok=True)
     os.makedirs(os.path.join(project_name, "gwaje_gwaje"), exist_ok=True)
+    os.makedirs(os.path.join(project_name, ".vscode"), exist_ok=True)
+
+    # VS Code Tasks configuration (Run with Ctrl + Shift + B)
+    vscode_tasks = {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "label": "Gudanar da Harshe (Run Project)",
+                "type": "shell",
+                "command": "harshe run babban_shiri.hausa",
+                "group": {
+                    "kind": "build",
+                    "isDefault": True
+                },
+                "presentation": {
+                    "reveal": "always",
+                    "panel": "shared"
+                },
+                "problemMatcher": []
+            }
+        ]
+    }
+    with open(os.path.join(project_name, ".vscode", "tasks.json"), "w", encoding="utf-8") as f:
+        json.dump(vscode_tasks, f, indent=2, ensure_ascii=False)
+
 
     config = {
         "suna": project_name,

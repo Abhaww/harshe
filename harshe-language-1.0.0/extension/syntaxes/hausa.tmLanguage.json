@@ -1,0 +1,127 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Harshe",
+  "scopeName": "source.hausa",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#keywords" },
+    { "include": "#builtins" },
+    { "include": "#constants" },
+    { "include": "#numbers" },
+    { "include": "#operators" },
+    { "include": "#functions" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.number-sign.hausa",
+          "match": "#.*$"
+        },
+        {
+          "name": "comment.line.double-slash.hausa",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.block.hausa",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.hausa",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.hausa",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.hausa",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.hausa",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.hausa",
+          "match": "\\b(in ba haka ba|ko idan|yayin da|a cikin|ci gaba|ci_gaba|idan|ga|aiki|koma|tsaya|gwada|kama|shigo_da|shigo da|daga)\\b"
+        },
+        {
+          "name": "storage.type.hausa",
+          "match": "\\b(bari|saka|tsayayye)\\b"
+        },
+        {
+          "name": "keyword.operator.logical.hausa",
+          "match": "\\b(kuma|ko|ba)\\b"
+        }
+      ]
+    },
+    "builtins": {
+      "patterns": [
+        {
+          "name": "support.function.builtin.hausa",
+          "match": "\\b(buga|karba|tsawo|kewayon|nau'i|nau_i|lamba|rubutu|dabi'a|dabi_a|kara|cire|saka_a|raba|hade|makullan_kamus|darajojin_kamus|cikakken_lamba|zagaye|mafi_girma|mafi_kankanta|tushe|iko|lokaci|karanta_fayil|rubuta_fayil|bazuwar_lamba|zabi_a_jeri|karanta_json|rubuta_json|fita_daga_shiri)\\b"
+        }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "name": "constant.language.boolean.hausa",
+          "match": "\\b(gaskiya|karya)\\b"
+        },
+        {
+          "name": "constant.language.null.hausa",
+          "match": "\\b(babu)\\b"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.hausa",
+          "match": "\\b\\d+(\\.\\d+)?\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.hausa",
+          "match": "(\\+|-|\\*|/|%|\\*\\*|\\^|=|\\+=|-=|\\*=|/=|==|!=|<|<=|>|>=|&&|\\|\\||!|->)"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "match": "\\b(aiki)\\s+([a-zA-Z_][a-zA-Z0-9_']*)",
+          "captures": {
+            "1": { "name": "keyword.control.hausa" },
+            "2": { "name": "entity.name.function.hausa" }
+          }
+        },
+        {
+          "match": "\\b([a-zA-Z_][a-zA-Z0-9_']*)\\s*(?=\\()",
+          "name": "entity.name.function.call.hausa"
+        }
+      ]
+    }
+  }
+}
