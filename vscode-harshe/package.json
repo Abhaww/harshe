@@ -1,0 +1,45 @@
+{
+  "name": "harshe-language",
+  "displayName": "Harshe (HausaLang) Support",
+  "description": "Full syntax highlighting, snippets, and language support for Harshe (Hausa Programming Language)",
+  "version": "1.0.0",
+  "publisher": "HarsheLang",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "hausa",
+        "aliases": [
+          "Harshe",
+          "hausa",
+          "HausaLang"
+        ],
+        "extensions": [
+          ".hausa",
+          ".har",
+          ".hsh"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "hausa",
+        "scopeName": "source.hausa",
+        "path": "./syntaxes/hausa.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "hausa",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  }
+}

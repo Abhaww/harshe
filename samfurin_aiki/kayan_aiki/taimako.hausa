@@ -1,0 +1,15 @@
+# ==========================================
+# Laburaren Taimako (Helper Module)
+# ==========================================
+
+aiki gaisuwa(suna) {
+    koma "Sannu da zuwa, " + suna + "!";
+}
+
+aiki hada_bayanai(sunan_aiki, siga) {
+    koma {
+        "aiki": sunan_aiki,
+        "siga": siga,
+        "harshe": "Harshe (HausaLang)"
+    };
+}

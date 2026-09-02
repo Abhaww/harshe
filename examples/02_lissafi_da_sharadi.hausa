@@ -1,0 +1,54 @@
+# ==========================================
+# Misali 2: Lissafi Da Sharudda
+# (Example 2: Arithmetic, Logic & Conditionals)
+# ==========================================
+
+buga("--- 1. Lissafin Lambobi (Arithmetic) ---");
+bari lamba_a = 25;
+bari lamba_b = 4;
+
+buga("a =", lamba_a, ", b =", lamba_b);
+buga("Tara (+):", lamba_a + lamba_b);
+buga("Debewa (-):", lamba_a - lamba_b);
+buga("Ninkawa (*):", lamba_a * lamba_b);
+buga("Rabawa (/):", lamba_a / lamba_b);
+buga("Sauran Rabo (%):", lamba_a % lamba_b);
+buga("Ikon Lamba (a ^ b):", iko(lamba_a, 2));
+buga("Tushen Lamba (sqrt):", tushe(lamba_a));
+
+buga("\n--- 2. Sharudda (Conditionals: idan, ko idan, in ba haka ba) ---");
+
+bari maki = 85;
+buga("Makin Dalibin:", maki);
+
+idan (maki >= 75 kuma maki <= 100) {
+    buga("Daraja: 'A' (Mafi Kyau / Excellent)");
+} ko idan (maki >= 60 kuma maki < 75) {
+    buga("Daraja: 'B' (Yayi Kyau / Very Good)");
+} ko idan (maki >= 50 kuma maki < 60) {
+    buga("Daraja: 'C' (Matsakaici / Credit)");
+} ko idan (maki >= 40 kuma maki < 50) {
+    buga("Daraja: 'D' (Ya Wuce / Pass)");
+} in ba haka ba {
+    buga("Daraja: 'F' (Bai Ci Ba / Fail)");
+}
+
+buga("\n--- 3. Masu Hada Hukunci (Logical: kuma, ko, ba) ---");
+bari mai_katin_shaida = gaskiya;
+bari ya_cika_shekaru = gaskiya;
+
+idan (mai_katin_shaida kuma ya_cika_shekaru) {
+    buga("Za ka iya kada kuri'a a zabe!");
+}
+
+bari kudi_a_aljihu = 50;
+bari kudi_a_banki = 500;
+
+idan (kudi_a_aljihu >= 100 ko kudi_a_banki >= 100) {
+    buga("Za ka iya siyan abinci.");
+}
+
+bari an_rufe_kofa = karya;
+idan (ba an_rufe_kofa) {
+    buga("Kofa a bude take, shigo ciki!");
+}

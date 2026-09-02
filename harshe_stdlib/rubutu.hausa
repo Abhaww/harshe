@@ -1,0 +1,38 @@
+# ==========================================
+# Laburaren Sarrafa Rubutu na Harshe (String Library)
+# ==========================================
+
+# 1. Juya rubutu daga karshe zuwa farko (Reverse String)
+aiki juya_rubutu(rubutun) {
+    bari sabon_rubutu = "";
+    bari t = tsawo(rubutun);
+    bari i = t - 1;
+    yayin da (i >= 0) {
+        sabon_rubutu += rubutun[i];
+        i -= 1;
+    }
+    koma sabon_rubutu;
+}
+
+# 2. Bincika ko rubutu daidai yake idan aka juya shi (Palindrome Check)
+aiki ko_palindrome_ne(rubutun) {
+    bari juyayye = juya_rubutu(rubutun);
+    koma rubutun == juyayye;
+}
+
+# 3. Adadin kalmomi a cikin rubutu (Word Count)
+aiki adadin_kalmomi(rubutun) {
+    bari kalmomi = raba(rubutun, " ");
+    bari adadi = 0;
+    ga k a cikin kalmomi {
+        idan (tsawo(k) > 0) {
+            adadi += 1;
+        }
+    }
+    koma adadi;
+}
+
+# 4. Mayar da babban harafin farko (Capitalize word - simple helper)
+aiki hada_kalamai(jerin_kalamai, mai_raba) {
+    koma hade(jerin_kalamai, mai_raba);
+}

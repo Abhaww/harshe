@@ -1,0 +1,31 @@
+# ==========================================
+# Misali 1: Sannu Duniya Da Masu Canji
+# (Example 1: Hello World & Variables in Harshe)
+# ==========================================
+
+# 1. Buga sakon farko
+buga("========================================");
+buga("  Barka da zuwa Harshen Harshe!  ");
+buga("========================================");
+
+# 2. Sanar da masu canji (Variables) ta amfani da 'bari' ko 'saka'
+bari sunana = "Aliyu";
+bari garina = "Kano";
+bari shekaru = 24;
+
+# 3. Tsayayye (Constant) wanda ba a sauyawa
+tsayayye KASA = "Nigeria";
+
+# 4. Buga bayanai
+buga("Sunana:", sunana);
+buga("Ina zama a garin:", garina);
+buga("Shekaruna:", shekaru);
+buga("Kasata:", KASA);
+
+# 5. Sauya darajar mai canji
+shekaru = shekaru + 1;
+buga("A shekara mai zuwa, shekaruna za su zama:", shekaru);
+
+# 6. Hada rubutu (String Concatenation)
+bari cikakken_sako = "Sannu " + sunana + " daga " + garina + ", " + KASA + "!";
+buga(cikakken_sako);

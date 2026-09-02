@@ -1,0 +1,15 @@
+# ==========================================
+# Babban Shirin samfurin_aiki
+# ==========================================
+
+daga "kayan_aiki/taimako.hausa" shigo_da gaisuwa, hada_bayanai;
+
+buga("========================================");
+buga("  Barka da zuwa Aikin: samfurin_aiki  ");
+buga("========================================");
+
+bari sakon_gaisuwa = gaisuwa("Aboki");
+buga(sakon_gaisuwa);
+
+bari bayanin_aikina = hada_bayanai("samfurin_aiki", "1.0.0");
+buga("Bayanin Aiki:", bayanin_aikina);

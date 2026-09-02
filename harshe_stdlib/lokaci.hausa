@@ -1,0 +1,33 @@
+# ==========================================
+# Laburaren Lokaci da Kwanaki a Hausa (Time & Calendar Library)
+# ==========================================
+
+tsayayye RANA_LITININ = "Litinin";
+tsayayye RANA_TALATA = "Talata";
+tsayayye RANA_LARABA = "Laraba";
+tsayayye RANA_ALHAMIS = "Alhamis";
+tsayayye RANA_JUMAA = "Juma'a";
+tsayayye RANA_ASABAR = "Asabar";
+tsayayye RANA_LARADI = "Lahadi";
+
+tsayayye KWANAKIN_MAKO = [
+    "Litinin", "Talata", "Laraba", "Alhamis", "Juma'a", "Asabar", "Lahadi"
+];
+
+tsayayye WATANNIN_SHEKARA = [
+    "Janairu", "Fabrairu", "Maris", "Afrilu", "Mayu", "Yuni",
+    "Yuli", "Agusta", "Satumba", "Oktoba", "Nuwamba", "Disamba"
+];
+
+# Gaisuwa gwargwadon lokaci
+aiki gaisuwar_lokaci(awa) {
+    idan (awa >= 5 kuma awa < 12) {
+        koma "Ina kwana (Barka da safe)";
+    } ko idan (awa >= 12 kuma awa < 16) {
+        koma "Barka da rana";
+    } ko idan (awa >= 16 kuma awa < 20) {
+        koma "Barka da yamma";
+    } in ba haka ba {
+        koma "Barka da dare";
+    }
+}

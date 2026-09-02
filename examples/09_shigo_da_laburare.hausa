@@ -1,0 +1,65 @@
+# ==========================================
+# Misali 9: Shigo da Laburare (Module Imports in Hausa)
+# ==========================================
+
+# 1. Shigo da laburaren lissafi na ciki
+shigo_da "lissafi";
+
+buga("========================================");
+buga("  Gwajin Laburaren Lissafi (Math Stdlib)  ");
+buga("========================================");
+
+bari jerin_maki = [80, 95, 70, 85, 90];
+buga("Makin Dalibai:", jerin_maki);
+buga("Matsakaicin Maki:", matsakaici(jerin_maki));
+
+bari lamba_gwaji = 17;
+idan (ko_lamba_marar_rabo_ce(lamba_gwaji)) {
+    buga("Lambar", lamba_gwaji, "lamba ce marar rabo (Prime Number)!");
+}
+
+buga("Fadin da'ira mai radius 7:", fadin_daira(7));
+
+# 2. Shigo da takamaiman ayyuka daga laburaren rubutu
+daga "rubutu" shigo_da juya_rubutu, ko_palindrome_ne, adadin_kalmomi;
+
+buga("\n========================================");
+buga("  Gwajin Laburaren Rubutu (String Stdlib)  ");
+buga("========================================");
+
+bari kalma = "harshe";
+buga("Kalma:", kalma);
+buga("Juyayyen Kalma:", juya_rubutu(kalma));
+
+bari kalma2 = "kayak";
+idan (ko_palindrome_ne(kalma2)) {
+    buga("Kalmar '" + kalma2 + "' palindrome ce!");
+}
+
+bari jimla = "Harshe shine harshen shirye-shiryen kwamfuta a Hausa";
+buga("Jimla:", jimla);
+buga("Adadin kalmomi a ciki:", adadin_kalmomi(jimla));
+
+# 3. Shigo da laburaren lokaci
+shigo_da "lokaci";
+buga("\n========================================");
+buga("  Gwajin Laburaren Lokaci (Time Stdlib)   ");
+buga("========================================");
+buga("Kwanakin mako a Hausa:", KWANAKIN_MAKO);
+buga("Gaisuwa da karfe 9 na safe:", gaisuwar_lokaci(9));
+buga("Gaisuwa da karfe 8 na dare:", gaisuwar_lokaci(20));
+
+# 4. Gwajin Bazuwa da JSON (Random & JSON built-ins)
+buga("\n========================================");
+buga("  Gwajin Bazuwa da JSON (Random & JSON)   ");
+buga("========================================");
+bari lamba_bazuwa = bazuwar_lamba(1, 100);
+buga("Lambar bazuwa a tsakanin 1 da 100:", lamba_bazuwa);
+
+bari abubuwan_sha = ["Fura da Nono", "Zobo", "Kunun Aya", "Shayi"];
+buga("Abin sha da aka zaba ta bazuwa:", zabi_a_jeri(abubuwan_sha));
+
+bari bayanin_json = '{"suna": "Godiya", "shekaru": 20, "birni": "Zaria"}';
+bari kamus_daga_json = karanta_json(bayanin_json);
+buga("Kamus daga JSON:", kamus_daga_json);
+buga("Sunan mutum daga JSON:", kamus_daga_json["suna"]);

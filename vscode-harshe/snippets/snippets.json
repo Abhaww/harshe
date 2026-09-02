@@ -1,0 +1,83 @@
+{
+  "Variable Declaration": {
+    "prefix": "bari",
+    "body": [
+      "bari ${1:suna} = ${2:daraja};"
+    ],
+    "description": "Sanar da sabon mai canji (Variable declaration)"
+  },
+  "Constant Declaration": {
+    "prefix": "tsayayye",
+    "body": [
+      "tsayayye ${1:PI} = ${2:3.14159};"
+    ],
+    "description": "Sanar da tsayayye (Constant declaration)"
+  },
+  "Print Output": {
+    "prefix": "buga",
+    "body": [
+      "buga(${1:\"Sannu Duniya!\"});"
+    ],
+    "description": "Buga sakonni zuwa allo (Print output)"
+  },
+  "If Condition": {
+    "prefix": "idan",
+    "body": [
+      "idan (${1:sharadi}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Sharadin idan (If statement)"
+  },
+  "If Else Condition": {
+    "prefix": "idan_inbahakaba",
+    "body": [
+      "idan (${1:sharadi}) {",
+      "\t${2:buga(\"Daidai\");}",
+      "} in ba haka ba {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Sharadin idan da in ba haka ba (If-Else statement)"
+  },
+  "While Loop": {
+    "prefix": "yayinda",
+    "body": [
+      "yayin da (${1:i < 10}) {",
+      "\t$0",
+      "\t${1:i} += 1;",
+      "}"
+    ],
+    "description": "Madaukin yayin da (While loop)"
+  },
+  "For Loop": {
+    "prefix": "ga",
+    "body": [
+      "ga ${1:abu} a cikin ${2:kewayon(1, 10)} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Madaukin ga a cikin (For in loop)"
+  },
+  "Function Definition": {
+    "prefix": "aiki",
+    "body": [
+      "aiki ${1:sunan_aiki}(${2:ma'auni}) {",
+      "\t$0",
+      "\tkoma ${3:sakamako};",
+      "}"
+    ],
+    "description": "Kirkirar sabon aiki (Function definition)"
+  },
+  "Try Catch": {
+    "prefix": "gwada",
+    "body": [
+      "gwada {",
+      "\t$0",
+      "} kama (${1:kuskure}) {",
+      "\tbuga(\"An sami kuskure:\", ${1:kuskure});",
+      "}"
+    ],
+    "description": "Kula da kuskure (Try-catch error handling)"
+  }
+}

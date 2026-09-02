@@ -1,0 +1,69 @@
+# ==========================================
+# Misali 4: Ayyuka Da Koma Daraja
+# (Example 4: Functions, Recursion & Closures)
+# ==========================================
+
+buga("--- 1. Kirkirar Aiki (Basic Function) ---");
+
+aiki gaisuwa(suna, lokaci) {
+    koma "Barka da " + lokaci + ", " + suna + "!";
+}
+
+bari sako1 = gaisuwa("Fatima", "yamma");
+bari sako2 = gaisuwa("Ibrahim", "safe");
+buga(sako1);
+buga(sako2);
+
+buga("\n--- 2. Aikin Lissafi (Math Function) ---");
+
+aiki lissafa_fadin_danki(tsawo, fadi) {
+    bari fadi_duka = tsawo * fadi;
+    koma fadi_duka;
+}
+
+bari fadi = lissafa_fadin_danki(12, 8);
+buga("Fadin dakin shine:", fadi, "sqm");
+
+buga("\n--- 3. Aiki Mai Koma Kansa (Recursion: Factorial & Fibonacci) ---");
+
+# Lissafin Factorial: n! = n * (n-1)!
+aiki factorial(n) {
+    idan (n <= 1) {
+        koma 1;
+    }
+    koma n * factorial(n - 1);
+}
+
+buga("5! (Factorial na 5):", factorial(5));
+buga("6! (Factorial na 6):", factorial(6));
+
+# Lissafin Fibonacci: 0, 1, 1, 2, 3, 5, 8, 13...
+aiki fibonacci(n) {
+    idan (n <= 0) {
+        koma 0;
+    } ko idan (n == 1) {
+        koma 1;
+    }
+    koma fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+buga("Jerin Fibonacci na farko 8:");
+ga i a cikin kewayon(0, 8) {
+    buga("  fib(" + rubutu(i) + ") =", fibonacci(i));
+}
+
+buga("\n--- 4. Aiki a Cikin Aiki Da Closure ---");
+
+aiki kirkiri_mai_ninkawa(ninki) {
+    # Aiki a cikin aiki wanda yake rike da darajar 'ninki'
+    aiki ninka(lamba) {
+        koma lamba * ninki;
+    }
+    koma ninka;
+}
+
+bari ninka_biyu = kirkiri_mai_ninkawa(2);
+bari ninka_uku = kirkiri_mai_ninkawa(3);
+
+buga("10 ninka biyu:", ninka_biyu(10));
+buga("10 ninka uku:", ninka_uku(10));

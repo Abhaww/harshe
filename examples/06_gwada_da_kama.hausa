@@ -1,0 +1,43 @@
+# ==========================================
+# Misali 6: Gwada Da Kama Kuskure
+# (Example 6: Error Handling with Try/Catch in Hausa)
+# ==========================================
+
+buga("--- 1. Kama Kuskuren Lissafi (Zero Division) ---");
+
+gwada {
+    buga("Ana kokarin raba 100 da 0...");
+    bari sakamako = 100 / 0;
+    buga("Wannan ba zai taba bugawa ba:", sakamako);
+} kama (kuskure) {
+    buga("  [An kama kuskure]:", kuskure);
+    buga("  Shirin bai fadi ba, ya ci gaba da aiki lami lafiya!");
+}
+
+buga("\n--- 2. Kama Kuskuren Matsayin Jeri (Index Error) ---");
+
+gwada {
+    bari jerina = [10, 20, 30];
+    buga("Jeri:", jerina);
+    buga("Kokarin daukar lamba a matsayi na 100...");
+    bari x = jerina[100];
+} kama (kuskure) {
+    buga("  [An kama kuskure]:", kuskure);
+}
+
+buga("\n--- 3. Aikin Raba Lamba Mai Kariya (Safe Division Function) ---");
+
+aiki raba_lafiya(a, b) {
+    gwada {
+        koma a / b;
+    } kama (kuskure) {
+        buga("  Gargadi: Ba a iya raba", a, "da", b, "ba (" + kuskure + ")");
+        koma babu;
+    }
+}
+
+bari res1 = raba_lafiya(20, 4);
+bari res2 = raba_lafiya(50, 0);
+
+buga("Sakamako 1 (20 / 4):", res1);
+buga("Sakamako 2 (50 / 0):", res2);

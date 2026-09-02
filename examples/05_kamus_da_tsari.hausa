@@ -1,0 +1,48 @@
+# ==========================================
+# Misali 5: Kamus Da Tsarin Bayanai
+# (Example 5: Dictionaries & Structured Data)
+# ==========================================
+
+buga("--- 1. Kamus (Dictionaries / Key-Value Maps) ---");
+
+bari dalibi = {
+    "suna": "Zainab Abubakar",
+    "shekaru": 21,
+    "fannin_karatu": "Kimiyyar Kwamfuta (Computer Science)",
+    "maki": 88.5,
+    "mai_aiki": gaskiya
+};
+
+buga("Cikakken bayanin dalibi:", dalibi);
+buga("Sunan Dalibi:", dalibi["suna"]);
+buga("Fannin Karatu:", dalibi["fannin_karatu"]);
+buga("Makin Dalibi:", dalibi["maki"]);
+
+# Sauya daraja a kamus
+dalibi["shekaru"] = 22;
+dalibi["matakin_karatu"] = "Digiri na Farko (BSc)";
+
+buga("\nBayan sabunta bayanai:");
+buga("Shekarun yanzu:", dalibi["shekaru"]);
+buga("Matakin karatu:", dalibi["matakin_karatu"]);
+
+buga("\n--- 2. Makullan Kamus Da Darajoji ---");
+buga("Duk Makullai (Keys):", makullan_kamus(dalibi));
+buga("Duk Darajoji (Values):", darajojin_kamus(dalibi));
+
+buga("\n--- 3. Jerin Kamus na Daliban Aji ---");
+
+bari aji = [
+    {"suna": "Mustapha", "maki": 92},
+    {"suna": "Halima", "maki": 78},
+    {"suna": "Usman", "maki": 84}
+];
+
+bari jimillar_maki = 0;
+ga mutum a cikin aji {
+    buga("  Dalibi:", mutum["suna"], "-> Maki:", mutum["maki"]);
+    jimillar_maki = jimillar_maki + mutum["maki"];
+}
+
+bari matsakaici = jimillar_maki / tsawo(aji);
+buga("\nMatsakaicin makin ajin:", matsakaici);

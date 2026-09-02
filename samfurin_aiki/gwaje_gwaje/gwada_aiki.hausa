@@ -1,0 +1,12 @@
+# ==========================================
+# Gwajin Aiki (Unit Tests)
+# ==========================================
+
+daga "../kayan_aiki/taimako.hausa" shigo_da gaisuwa;
+
+bari g = gaisuwa("Zainab");
+idan (g == "Sannu da zuwa, Zainab!") {
+    buga("[MADALLA]: Gwajin aikin gaisuwa ya yi nasara!");
+} in ba haka ba {
+    buga("[KUSKURE]: Gwajin aiki ya gaza!");
+}

@@ -1,0 +1,57 @@
+# ==========================================
+# Misali 7: Wasan Kacici-Kacici
+# (Example 7: Number Guessing & Riddle Game in Hausa)
+# ==========================================
+
+buga("==================================================");
+buga("  Barka da Zuwa Wasan Kacici-Kacici a Harshe!   ");
+buga("==================================================");
+
+# Tsarin Tambayoyi da Amsoshi
+bari tambayoyi = [
+    {
+        "tambaya": "Na shiga daji ba ni da kafa, na fito ba ni da kafa. Wanene ni?",
+        "amsa": "maciji"
+    },
+    {
+        "tambaya": "Fari ne sol, idan ya fadi ba ya fashewa, amma idan ruwa ya taba shi sai ya narke. Mene ne?",
+        "amsa": "gishiri"
+    },
+    {
+        "tambaya": "Yana tafiya ba tare da kafa ba, yana kuka ba tare da baki ba. Mene ne?",
+        "amsa": "iska"
+    }
+];
+
+bari maki = 0;
+bari jimilla = tsawo(tambayoyi);
+
+buga("Akwai kacici-kacici guda", jimilla, "da za a amsa.\n");
+
+ga tambaya_data a cikin tambayoyi {
+    buga("Tambaya:");
+    buga("  " + tambaya_data["tambaya"]);
+    
+    bari amsar_mai_amfani = karba("  Shigar da amsarka: ");
+    
+    # Kwatanta amsa (za mu iya bincika ko ta yi daidai)
+    idan (amsar_mai_amfani == tambaya_data["amsa"]) {
+        buga("  \033[32m[Madalla! Ka ci amsar!]\033[0m\n");
+        maki = maki + 1;
+    } in ba haka ba {
+        buga("  \033[31m[Kash! Ba daidai ba.]\033[0m Ainihin amsar ita ce: " + tambaya_data["amsa"] + "\n");
+    }
+}
+
+buga("--------------------------------------------------");
+buga("Karshen Wasa!");
+buga("Makin da ka samu:", maki, "daga cikin", jimilla);
+
+idan (maki == jimilla) {
+    buga("Gwanin gaske! Ka amsa duka tambayoyin!");
+} ko idan (maki > 0) {
+    buga("Ka yi kokari sosai!");
+} in ba haka ba {
+    buga("Sake gwadawa wani lokaci!");
+}
+buga("--------------------------------------------------");

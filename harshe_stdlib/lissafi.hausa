@@ -1,0 +1,61 @@
+# ==========================================
+# Laburaren Lissafi na Harshe (Math Library)
+# ==========================================
+
+# 1. Bincika ko lamba 'Prime Number' ce
+aiki ko_lamba_marar_rabo_ce(n) {
+    idan (n <= 1) {
+        koma karya;
+    }
+    idan (n <= 3) {
+        koma gaskiya;
+    }
+    idan (n % 2 == 0 ko n % 3 == 0) {
+        koma karya;
+    }
+    bari i = 5;
+    yayin da (i * i <= n) {
+        idan (n % i == 0 ko n % (i + 2) == 0) {
+            koma karya;
+        }
+        i += 6;
+    }
+    koma gaskiya;
+}
+
+# 2. Matsakaicin jerin lambobi (Average / Mean)
+aiki matsakaici(jeri_lambobi) {
+    idan (tsawo(jeri_lambobi) == 0) {
+        koma 0;
+    }
+    bari jimilla = 0;
+    ga x a cikin jeri_lambobi {
+        jimilla += x;
+    }
+    koma jimilla / tsawo(jeri_lambobi);
+}
+
+# 3. Factorial na lamba
+aiki factorial(n) {
+    idan (n <= 1) {
+        koma 1;
+    }
+    koma n * factorial(n - 1);
+}
+
+# 4. Fadin Da'ira (Area of Circle: PI * r^2)
+tsayayye PI = 3.14159265359;
+
+aiki fadin_daira(radius) {
+    koma PI * (radius ** 2);
+}
+
+# 5. Kewaye na Da'ira (Circumference: 2 * PI * r)
+aiki kewayen_daira(radius) {
+    koma 2 * PI * radius;
+}
+
+# 6. Fadin Kusurwa Hudu (Area of Rectangle)
+aiki fadin_kusurwa_hudu(tsawo, fadi) {
+    koma tsawo * fadi;
+}

@@ -1,0 +1,52 @@
+# ==========================================
+# Misali 3: Jeri Da Madaukai
+# (Example 3: Lists & Loops in Harshe)
+# ==========================================
+
+buga("--- 1. Jeri (Lists / Arrays) ---");
+bari dabbobi = ["Doki", "Saniya", "Akuya", "Rago"];
+buga("Duk Dabbobin:", dabbobi);
+buga("Dabba ta farko:", dabbobi[0]);
+buga("Dabba ta biyu:", dabbobi[1]);
+buga("Tsawon jeri:", tsawo(dabbobi));
+
+# Sanya sabon abu a jeri
+kara(dabbobi, "Kaza");
+buga("Bayan an kara 'Kaza':", dabbobi);
+
+# Cire abu daga jeri
+bari wanda_aka_cire = cire(dabbobi);
+buga("An cire:", wanda_aka_cire);
+buga("Jeri bayan an cire:", dabbobi);
+
+buga("\n--- 2. Madaukin 'ga ... a cikin ...' (For Loop) ---");
+ga dabba a cikin dabbobi {
+    buga("  -> Ina son dabban nan:", dabba);
+}
+
+buga("\n--- 3. Madauki ta amfani da 'kewayon' (Range loop) ---");
+buga("Lissafin lambobi daga 1 zuwa 5:");
+ga lamba a cikin kewayon(1, 6) {
+    buga("  Lamba mai lamba:", lamba);
+}
+
+buga("\n--- 4. Madaukin 'yayin da' (While Loop) ---");
+bari kirga = 5;
+yayin da (kirga > 0) {
+    buga("  Kirgawa kasa:", kirga);
+    kirga = kirga - 1;
+}
+buga("  An tashi! (Liftoff!)");
+
+buga("\n--- 5. Amfani da 'tsaya' (break) da 'ci_gaba' (continue) ---");
+ga i a cikin kewayon(1, 10) {
+    idan (i == 3) {
+        buga("  (Ketare lamba 3 da 'ci_gaba')");
+        ci_gaba;
+    }
+    idan (i == 7) {
+        buga("  (Tsayar da madauki a 7 da 'tsaya')");
+        tsaya;
+    }
+    buga("  Daraja:", i);
+}

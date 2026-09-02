@@ -1,0 +1,40 @@
+# ==========================================
+# Misali 8: Nau'o'in Bayanai Da Ayyukan Ciki
+# (Example 8: Type Hints & Built-in Helpers)
+# ==========================================
+
+buga("--- 1. Sanarwa Tare Da Nau'i (Optional Type Annotations) ---");
+
+bari suna: rubutu = "Amina Lawal";
+bari shekaru: lamba = 23;
+bari mai_karatu: dabi'a = gaskiya;
+bari abubuwa: jeri = ["Littafi", "Biro", "Kwamfuta"];
+
+buga("Suna:", suna, "| Nau'i:", nau'i(suna));
+buga("Shekaru:", shekaru, "| Nau'i:", nau'i(shekaru));
+buga("Mai karatu:", mai_karatu, "| Nau'i:", nau'i(mai_karatu));
+buga("Abubuwa:", abubuwa, "| Nau'i:", nau'i(abubuwa));
+
+buga("\n--- 2. Aiki Mai Bayyana Nau'i (Function with Type Annotations) ---");
+
+aiki ninka_lamba(x: lamba) -> lamba {
+    koma x * 2;
+}
+
+bari sakamako = ninka_lamba(45);
+buga("45 ninka biyu:", sakamako);
+
+buga("\n--- 3. Ayyukan Raba Da Hada Rubutu (Split & Join) ---");
+
+bari jimla = "Kano,Kaduna,Katsina,Sokoto";
+bari birane = raba(jimla, ",");
+buga("Bayan an raba:", birane);
+
+bari sabuwar_jimla = hade(birane, " -> ");
+buga("Bayan an hade:", sabuwar_jimla);
+
+buga("\n--- 4. Mafi Girma Da Mafi Kankanta (Max & Min) ---");
+bari jerin_lambobi = [12, 85, 3, 99, 44];
+buga("Lambobi:", jerin_lambobi);
+buga("Mafi Girma:", mafi_girma(jerin_lambobi));
+buga("Mafi Kankanta:", mafi_kankanta(jerin_lambobi));
